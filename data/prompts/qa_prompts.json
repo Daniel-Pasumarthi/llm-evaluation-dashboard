@@ -1,0 +1,62 @@
+[
+  {
+    "id": "qa_001",
+    "question": "What causes seasons on Earth?",
+    "context": "Earth's seasons are caused by the tilt of its rotational axis at approximately 23.5 degrees relative to its orbit around the Sun. When the Northern Hemisphere tilts toward the Sun, it experiences summer while the Southern Hemisphere has winter. This axial tilt means different parts of Earth receive different amounts of solar energy throughout the year. The distance from the Sun is not the primary cause of seasons.",
+    "ground_truth": "Seasons are caused by Earth's axial tilt of 23.5 degrees, which causes different hemispheres to receive varying amounts of solar energy throughout the year."
+  },
+  {
+    "id": "qa_002",
+    "question": "How does photosynthesis work?",
+    "context": "Photosynthesis is the process by which plants, algae, and some bacteria convert light energy into chemical energy stored as glucose. It occurs primarily in the chloroplasts of plant cells, which contain a pigment called chlorophyll that absorbs sunlight. The process uses carbon dioxide from the air and water from the soil, releasing oxygen as a byproduct. The overall equation is: 6CO2 + 6H2O + light energy produces C6H12O6 + 6O2.",
+    "ground_truth": "Photosynthesis converts light energy into glucose using carbon dioxide and water, releasing oxygen as a byproduct. It occurs in chloroplasts using chlorophyll to absorb sunlight."
+  },
+  {
+    "id": "qa_003",
+    "question": "What is the speed of light and why does it matter?",
+    "context": "The speed of light in a vacuum is approximately 299,792,458 meters per second, commonly rounded to 3 x 10^8 m/s. It is denoted by the letter c and is considered a fundamental constant of the universe. According to Einstein's special theory of relativity, no object with mass can reach or exceed the speed of light. It also defines the relationship between energy and mass through the equation E=mc^2.",
+    "ground_truth": "The speed of light is approximately 3 x 10^8 m/s. It is a universal constant that sets an upper limit on the speed of any object with mass, and defines the energy-mass relationship in E=mc^2."
+  },
+  {
+    "id": "qa_004",
+    "question": "How do vaccines work?",
+    "context": "Vaccines work by training the immune system to recognize and fight specific pathogens without causing the actual disease. They introduce a weakened, inactivated, or partial form of a pathogen, or instructions like mRNA to produce a harmless piece of it. The immune system responds by producing antibodies and memory cells. If the person later encounters the real pathogen, the immune system can respond rapidly and prevent serious illness.",
+    "ground_truth": "Vaccines train the immune system by exposing it to a harmless version or component of a pathogen, prompting antibody and memory cell production so the body can respond quickly to future infections."
+  },
+  {
+    "id": "qa_005",
+    "question": "What is the water cycle?",
+    "context": "The water cycle, also called the hydrological cycle, describes the continuous movement of water through Earth's systems. Water evaporates from oceans, lakes, and rivers due to solar energy, rises as water vapor, and cools to form clouds through condensation. It then falls back to Earth as precipitation such as rain or snow. Water flows back to oceans through rivers and groundwater, and the cycle repeats.",
+    "ground_truth": "The water cycle is the continuous movement of water through evaporation, condensation into clouds, precipitation as rain or snow, and return to oceans via rivers and groundwater."
+  },
+  {
+    "id": "qa_006",
+    "question": "What causes earthquakes?",
+    "context": "Earthquakes are caused by the sudden release of energy in Earth's crust, typically along fault lines where tectonic plates meet. Earth's outer shell is divided into several large tectonic plates that constantly move. When stress builds up at the boundaries where plates grind, collide, or pull apart, the rocks eventually slip and release energy as seismic waves. The point underground where the rupture starts is called the hypocenter, and the point directly above on the surface is the epicenter.",
+    "ground_truth": "Earthquakes are caused by the sudden release of stress built up along fault lines where tectonic plates meet. The energy released travels as seismic waves from the hypocenter underground."
+  },
+  {
+    "id": "qa_007",
+    "question": "How does the human heart work?",
+    "context": "The human heart is a muscular organ that pumps blood throughout the body. It has four chambers: the right and left atria on top, and the right and left ventricles on the bottom. Deoxygenated blood enters the right side of the heart and is pumped to the lungs to receive oxygen. Oxygenated blood returns to the left side and is pumped out to the rest of the body. The heart beats approximately 60 to 100 times per minute at rest.",
+    "ground_truth": "The heart pumps blood through four chambers. The right side receives deoxygenated blood and sends it to the lungs, while the left side receives oxygenated blood and pumps it to the body."
+  },
+  {
+    "id": "qa_008",
+    "question": "What is DNA and what does it do?",
+    "context": "DNA, or deoxyribonucleic acid, is a molecule that carries the genetic instructions for the development, functioning, growth, and reproduction of all known living organisms. It is structured as a double helix, consisting of two strands of nucleotides connected by base pairs. The four bases are adenine, thymine, guanine, and cytosine. Segments of DNA called genes encode instructions for building proteins, which carry out most of the functions in cells.",
+    "ground_truth": "DNA is a double helix molecule containing genetic instructions encoded in four bases. Genes within DNA instruct cells to build proteins that carry out biological functions."
+  },
+  {
+    "id": "qa_009",
+    "question": "What is a black hole?",
+    "context": "A black hole is a region of space where gravity is so strong that nothing, not even light, can escape once it crosses the event horizon. Black holes form when massive stars collapse at the end of their lives. The boundary of a black hole is called the event horizon, and the point of infinite density at the center is called the singularity. Scientists detect black holes indirectly by observing their gravitational effects on nearby matter and light.",
+    "ground_truth": "A black hole is a region of space with gravity so intense that nothing, including light, can escape past the event horizon. They form from collapsed massive stars and are detected through their gravitational effects."
+  },
+  {
+    "id": "qa_010",
+    "question": "How does the internet work?",
+    "context": "The internet is a global network of interconnected computers that communicate using standardized protocols, primarily TCP/IP. Data is broken into small packets that travel independently across the network and are reassembled at the destination. The Domain Name System converts human-readable website addresses into numerical IP addresses that computers use to find each other. Physical infrastructure including fiber optic cables, routers, and servers carry data around the world.",
+    "ground_truth": "The internet works by breaking data into packets that travel via TCP/IP protocols across interconnected networks of cables, routers, and servers, reassembling at the destination. DNS translates domain names into IP addresses."
+  }
+]
