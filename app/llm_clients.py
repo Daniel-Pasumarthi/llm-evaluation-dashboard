@@ -19,7 +19,7 @@ def call_openai(prompt: str) -> dict:
         model="gpt-4o",
         messages=[{"role": "user", "content": prompt}],
         temperature=0.0,
-        max_tokens=1024
+        max_tokens=2048
     )
 
     latency = time.time() - start_time
@@ -42,7 +42,7 @@ def call_anthropic(prompt: str) -> dict:
 
     response = anthropic_client.messages.create(
         model="claude-sonnet-4-6",
-        max_tokens=1024,
+        max_tokens=2048,
         messages=[{"role": "user", "content": prompt}],
         temperature=0.0
     )
@@ -70,7 +70,7 @@ def call_gemini(prompt: str) -> dict:
         contents=prompt,
         config=types.GenerateContentConfig(
             temperature=0.0,
-            max_output_tokens=1024
+            max_output_tokens=2048
         )
     )
 
