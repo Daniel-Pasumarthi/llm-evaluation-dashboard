@@ -5,6 +5,7 @@ from openai import OpenAI
 from anthropic import Anthropic
 from google import genai
 from google.genai import types
+from tenacity import retry, stop_after_attempt, wait_exponential
 
 load_dotenv()
 
@@ -12,6 +13,7 @@ openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 anthropic_client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 gemini_client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
+@retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=2, max=10))
 def call_openai(prompt: str) -> dict:
     start_time = time.time()
 
@@ -37,6 +39,7 @@ def call_openai(prompt: str) -> dict:
         "cost_usd": round(cost, 6)
     }
 
+@retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=2, max=10))
 def call_anthropic(prompt: str) -> dict:
     start_time = time.time()
 
@@ -62,6 +65,7 @@ def call_anthropic(prompt: str) -> dict:
         "cost_usd": round(cost, 6)
     }
 
+@retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=2, max=10))
 def call_gemini(prompt: str) -> dict:
     start_time = time.time()
 
