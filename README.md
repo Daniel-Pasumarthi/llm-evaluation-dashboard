@@ -1,24 +1,17 @@
 # Multi-Model LLM Evaluation Dashboard
 
-A Streamlit dashboard that benchmarks **GPT-4o, Claude Sonnet, and Gemini Flash 2.5** across identical prompts using **RAGAS evaluation metrics** and full **LangSmith** observability — built to answer a simple question with real data: *which model should you actually use?*
+A Streamlit dashboard that benchmarks **GPT-4o, Claude Sonnet, and Gemini Flash 2.5** on identical prompts using **RAGAS metrics** — built to answer *which model should you actually use?* with numbers instead of eyeballing outputs.
 
-## What it does
+## How it's built
 
-Running the same prompt set against three commercial LLM APIs and eyeballing the outputs doesn't scale — and it doesn't give you numbers you can defend. This dashboard standardizes that comparison:
-
-- Benchmarks **GPT-4o**, **Claude Sonnet**, and **Gemini Flash 2.5** on identical prompts
-- Scores every response on **RAGAS metrics**: faithfulness, answer relevancy, and context precision
-- Surfaces full results in an interactive Streamlit UI so quality-to-cost tradeoffs are visible at a glance, not buried in a notebook
-
-## Architecture
-
-- **Standardized multi-provider client layer** — one consistent interface across three different vendor SDKs, so adding a fourth model later is a small diff, not a rewrite
-- **LangSmith observability** — every benchmark run is logged and reproducible, not a one-off script execution
-- **RAGAS evaluation pipeline** — faithfulness, answer relevancy, and context precision computed per response, per model
+- **Standardized multi-provider client layer** — one consistent interface across three vendor SDKs, so adding a fourth model is a small diff, not a rewrite
+- **RAGAS evaluation pipeline** scoring faithfulness, answer relevancy, and context precision per response, per model
+- **Full LangSmith observability** — every benchmark run is logged and reproducible, not a one-off script execution
+- **Interactive results UI** so quality-to-cost tradeoffs are visible at a glance, not buried in a notebook
 
 ## A debugging note worth mentioning
 
-While building this, I diagnosed a scoring artifact in the RAGAS pipeline that traced back to model-specific response patterns (differences in how each model formats or hedges answers were quietly skewing scores). I corrected the benchmark methodology before drawing any conclusions from it — a reminder that evaluation frameworks need to be evaluated too.
+While building this, I diagnosed a scoring artifact in the RAGAS pipeline traced to model-specific response patterns — differences in how each model formats or hedges answers were quietly skewing scores. I corrected the methodology before drawing conclusions from it. Evaluation frameworks need to be evaluated too.
 
 ## Stack
 
