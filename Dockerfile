@@ -7,7 +7,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY app/ ./app/
 COPY data/ ./data/
+COPY streamlit_app.py .
 
 EXPOSE 8501
 
-CMD ["python", "-m", "streamlit", "run", "app/main.py", "--server.address=0.0.0.0"]
+CMD ["streamlit", "run", "streamlit_app.py", "--server.address=0.0.0.0"]
